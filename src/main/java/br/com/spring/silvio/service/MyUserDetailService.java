@@ -6,11 +6,11 @@
 * O importante é que você aprenda de verdade!
 *
  */
-package io.spring.aula.natan.service;
+package br.com.spring.silvio.service;
 
-import io.spring.aula.natan.config.MyUserDetails;
-import io.spring.aula.natan.entity.Usuario;
-import io.spring.aula.natan.repository.UsuarioRepository;
+import br.com.spring.silvio.config.MyUserDetails;
+import br.com.spring.silvio.entity.Usuario;
+import br.com.spring.silvio.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

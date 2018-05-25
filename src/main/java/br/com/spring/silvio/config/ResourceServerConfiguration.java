@@ -6,7 +6,7 @@
 * O importante é que você aprenda de verdade!
 *
  */
-package io.spring.aula.natan.config;
+package br.com.spring.silvio.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;

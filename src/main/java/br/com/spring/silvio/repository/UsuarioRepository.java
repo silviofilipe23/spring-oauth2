@@ -1,14 +1,7 @@
-/*
-*
-* Aula com Nataniel Paiva
-*
-* Esse projeto poderá ser distribuído da forma que você achar melhor
-* O importante é que você aprenda de verdade!
-*
- */
-package io.spring.aula.natan.repository;
 
-import io.spring.aula.natan.entity.Usuario;
+package br.com.spring.silvio.repository;
+
+import br.com.spring.silvio.entity.Usuario;
 import java.util.List;
 import org.springframework.data.mongodb.repository.MongoRepository;
 

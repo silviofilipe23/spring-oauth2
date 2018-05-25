@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package io.spring.aula.natan.utils;
+package br.com.spring.silvio.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,7 +31,7 @@ public class PasswordUtils {
             return senha;
         }
 
-        logger.info("gerando hash com BCrypt");
+        logger.info("Gerando o hash da senha com BCrypt");
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
         return bCryptPasswordEncoder.encode(senha);
     }

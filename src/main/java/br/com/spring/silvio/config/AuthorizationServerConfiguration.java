@@ -6,9 +6,11 @@
 * O importante é que você aprenda de verdade!
 *
  */
-package io.spring.aula.natan.config;
+package br.com.spring.silvio.config;
 
-import io.spring.aula.natan.service.MyUserDetailService;
+import br.com.spring.silvio.service.MyUserDetailService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -33,6 +35,8 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 
     private TokenStore tokenStore = new InMemoryTokenStore();
 
+    private static final Logger logger = LoggerFactory.getLogger(AuthorizationServerConfiguration.class);
+
     @Autowired
     @Qualifier("authenticationManagerBean")
     private AuthenticationManager authenticationManager;
@@ -51,11 +55,18 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
         clients
                 .inMemory()
                 .withClient("mobile")
-                .authorizedGrantTypes("password", "authorization_code", "refresh_token").scopes("bar", "read", "write")
-                .refreshTokenValiditySeconds(20000)
+                .authorizedGrantTypes("password", "authorization_code")
+                .scopes("bar", "read", "write")
+                .accessTokenValiditySeconds(20000)
+                
+                .and()
+                
+                .withClient("web")
+                .authorizedGrantTypes("password", "authorization_code")
+                .scopes("bar", "read", "write")
                 .accessTokenValiditySeconds(20000)
                 .resourceIds("restservice")
-                .secret("123");
+                .secret("$2a$10$HuHt.pOIf96zNtVzMvngQ.NkBD9RsVDLQSn6vMAPO9NfuaTb9XsMO");
     }
 
     @Bean

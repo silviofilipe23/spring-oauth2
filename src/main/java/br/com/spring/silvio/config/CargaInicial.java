@@ -6,12 +6,13 @@
 * O importante é que você aprenda de verdade!
 *
  */
-package io.spring.aula.natan.config;
+package br.com.spring.silvio.config;
 
-import io.spring.aula.natan.entity.Perfil;
-import io.spring.aula.natan.entity.Usuario;
-import io.spring.aula.natan.repository.PerfilRepository;
-import io.spring.aula.natan.repository.UsuarioRepository;
+import br.com.spring.silvio.entity.Perfil;
+import br.com.spring.silvio.entity.Usuario;
+import br.com.spring.silvio.repository.PerfilRepository;
+import br.com.spring.silvio.repository.UsuarioRepository;
+import br.com.spring.silvio.utils.PasswordUtils;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,29 +25,29 @@ import org.springframework.stereotype.Component;
  * @author Silvio Filipe
  */
 @Component
-public class CargaInicial  implements ApplicationListener<ContextRefreshedEvent>{
+public class CargaInicial implements ApplicationListener<ContextRefreshedEvent> {
 
     @Autowired
     UsuarioRepository usuarioRepository;
-    
+
     @Autowired
     PerfilRepository perfilRepository;
-    
+
     @Override
     public void onApplicationEvent(ContextRefreshedEvent e) {
         List<Perfil> perfis = perfilRepository.findAll();
-        
-        if(perfis.isEmpty()){
+
+        if (perfis.isEmpty()) {
             perfilRepository.save(new Perfil("ROLE_ADMIN"));
-            
+
             Perfil perfil = perfilRepository.findByNome("ROLE_ADMIN");
-            
+
             List<Perfil> perfisUsuario = new ArrayList<>();
-            
+
             perfisUsuario.add(perfil);
-            
-            usuarioRepository.save(new Usuario("Nataniel", perfisUsuario, "admin", "123"));
+
+            usuarioRepository.save(new Usuario("Silvio Filipe", perfisUsuario, "silvio.dionizio23@gmail.com", PasswordUtils.gerarBCrypt("123456")));
         }
     }
-    
+
 }

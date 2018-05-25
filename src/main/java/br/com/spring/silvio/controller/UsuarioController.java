@@ -6,10 +6,10 @@
 * O importante é que você aprenda de verdade!
 *
  */
-package io.spring.aula.natan.controller;
+package br.com.spring.silvio.controller;
 
-import io.spring.aula.natan.entity.Usuario;
-import io.spring.aula.natan.service.UsuarioService;
+import br.com.spring.silvio.entity.Usuario;
+import br.com.spring.silvio.service.UsuarioService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

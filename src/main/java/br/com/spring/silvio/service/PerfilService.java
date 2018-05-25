@@ -6,10 +6,10 @@
 * O importante é que você aprenda de verdade!
 *
  */
-package io.spring.aula.natan.service;
+package br.com.spring.silvio.service;
 
-import io.spring.aula.natan.entity.Perfil;
-import io.spring.aula.natan.repository.PerfilRepository;
+import br.com.spring.silvio.entity.Perfil;
+import br.com.spring.silvio.repository.PerfilRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

@@ -6,10 +6,9 @@
 * O importante é que você aprenda de verdade!
 *
  */
-package io.spring.aula.natan.config;
+package br.com.spring.silvio.config;
 
-import io.spring.aula.natan.entity.Usuario;
-import io.spring.aula.natan.utils.PasswordUtils;
+import br.com.spring.silvio.entity.Usuario;
 import java.util.Collection;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,7 +18,7 @@ import org.springframework.security.core.userdetails.UserDetails;
  * @author Silvio Filipe
  */
 public class MyUserDetails extends Usuario implements UserDetails{
-
+    
     public MyUserDetails(Usuario usuario) {
         super(usuario);
     }

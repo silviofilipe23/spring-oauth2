@@ -6,9 +6,9 @@
 * O importante é que você aprenda de verdade!
 *
  */
-package io.spring.aula.natan.repository;
+package br.com.spring.silvio.repository;
 
-import io.spring.aula.natan.entity.Perfil;
+import br.com.spring.silvio.entity.Perfil;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**

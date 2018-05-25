@@ -8,12 +8,12 @@
         <version>1.5.7.RELEASE</version>
     </parent>
 
-    <groupId>io.spring.aula.natan</groupId>
-    <artifactId>spring-aula7.1</artifactId>
+    <groupId>br.com.spring.silvio</groupId>
+    <artifactId>spring-oauth2</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>spring-aula7.1</name>
+    <name>spring-oauth2</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>

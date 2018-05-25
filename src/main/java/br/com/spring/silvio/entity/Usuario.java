@@ -1,6 +1,6 @@
-package io.spring.aula.natan.entity;
+package br.com.spring.silvio.entity;
 
-import io.spring.aula.natan.utils.PasswordUtils;
+import br.com.spring.silvio.utils.PasswordUtils;
 import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
@@ -90,6 +90,11 @@ public class Usuario {
 
     public void setPerfis(List<Perfil> perfis) {
         this.perfis = perfis;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "id=" + id + ", nome=" + nome + ", perfis=" + perfis + ", idade=" + idade + ", email=" + email + ", senha=" + senha + '}';
     }
 
 }

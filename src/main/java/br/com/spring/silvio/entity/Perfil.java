@@ -1,4 +1,4 @@
-package io.spring.aula.natan.entity;
+package br.com.spring.silvio.entity;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -44,4 +44,9 @@ public class Perfil implements GrantedAuthority{
         return nome;
     }
 
+    @Override
+    public String toString() {
+        return "Perfil{" + "id=" + id + ", nome=" + nome + '}';
+    }
+    
 }
