@@ -14,4 +14,6 @@ public interface UsuarioRepository extends MongoRepository<Usuario, String> {
     List<Usuario> findByNomeLikeIgnoreCase(String nome);
 
     Usuario findByEmail(String username);
+    
+    boolean existsByEmail(String email);
 }

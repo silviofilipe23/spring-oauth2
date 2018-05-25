@@ -17,15 +17,18 @@ public class Usuario {
     private String id;
 
     private String nome;
-    
-    @DBRef
-    private List<Perfil> perfis;
 
     private int idade;
 
     private String email;
     
     private String senha;
+    
+    @DBRef
+    private List<Perfil> perfis;
+    
+    @DBRef
+    private Endereco endereco;
 
     public Usuario() {
     }
@@ -92,9 +95,17 @@ public class Usuario {
         this.perfis = perfis;
     }
 
-    @Override
-    public String toString() {
-        return "Usuario{" + "id=" + id + ", nome=" + nome + ", perfis=" + perfis + ", idade=" + idade + ", email=" + email + ", senha=" + senha + '}';
+    public Endereco getEndereco() {
+        return endereco;
     }
 
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "id=" + id + ", nome=" + nome + ", idade=" + idade + ", email=" + email + ", senha=" + senha + ", perfis=" + perfis + ", endereco=" + endereco + '}';
+    }
+    
 }

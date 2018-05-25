@@ -22,7 +22,7 @@ import org.springframework.stereotype.Service;
  * @author Silvio Filipe
  */
 @Service
-public class PerfilService {
+public class PerfilService{
 
     @Autowired
     PerfilRepository perfilRepository;

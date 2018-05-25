@@ -10,7 +10,10 @@ package br.com.spring.silvio.service;
 
 import br.com.spring.silvio.entity.Usuario;
 import br.com.spring.silvio.repository.UsuarioRepository;
+import br.com.spring.silvio.utils.PasswordUtils;
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -23,6 +26,8 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UsuarioService {
+
+    private static final Logger logger = LoggerFactory.getLogger(UsuarioService.class);
 
     @Autowired
     UsuarioRepository usuarioRepository;
@@ -50,6 +55,10 @@ public class UsuarioService {
 
     public Usuario getById(String id) {
         return usuarioRepository.findOne(id);
+    }
+    
+    public boolean verificaEmail(String email){
+        return usuarioRepository.existsByEmail(email);
     }
 
 }

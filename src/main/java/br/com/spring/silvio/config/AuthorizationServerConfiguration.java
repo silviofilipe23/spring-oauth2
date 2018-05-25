@@ -54,19 +54,10 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients
                 .inMemory()
-                .withClient("mobile")
-                .authorizedGrantTypes("password", "authorization_code")
-                .scopes("bar", "read", "write")
-                .accessTokenValiditySeconds(20000)
-                
-                .and()
-                
                 .withClient("web")
                 .authorizedGrantTypes("password", "authorization_code")
                 .scopes("bar", "read", "write")
-                .accessTokenValiditySeconds(20000)
-                .resourceIds("restservice")
-                .secret("$2a$10$HuHt.pOIf96zNtVzMvngQ.NkBD9RsVDLQSn6vMAPO9NfuaTb9XsMO");
+                .accessTokenValiditySeconds(1800);
     }
 
     @Bean
