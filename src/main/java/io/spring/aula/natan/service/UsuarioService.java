@@ -19,7 +19,7 @@ import org.springframework.stereotype.Service;
 
 /**
  *
- * @author Nataniel Paiva <nataniel.paiva@gmail.com>
+ * @author Silvio Filipe
  */
 @Service
 public class UsuarioService {

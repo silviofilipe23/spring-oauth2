@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  *
- * @author Nataniel Paiva <nataniel.paiva@gmail.com>
+ * @author Silvio Filipe
  */
 @SpringBootApplication
 public class Aplicacao {

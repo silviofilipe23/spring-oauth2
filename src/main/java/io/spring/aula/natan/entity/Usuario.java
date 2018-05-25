@@ -1,12 +1,14 @@
 package io.spring.aula.natan.entity;
 
+import io.spring.aula.natan.utils.PasswordUtils;
 import java.util.List;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  *
- * @author Nataniel Paiva <nataniel.paiva@gmail.com>
+ * @author Silvio Filipe
  */
 @Document
 public class Usuario {
@@ -15,7 +17,8 @@ public class Usuario {
     private String id;
 
     private String nome;
-
+    
+    @DBRef
     private List<Perfil> perfis;
 
     private int idade;
@@ -46,7 +49,7 @@ public class Usuario {
     }
 
     public void setSenha(String senha) {
-        this.senha = senha;
+        this.senha = PasswordUtils.gerarBCrypt(senha);
     }
 
     public String getNome() {

@@ -17,7 +17,7 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
 
 /**
  *
- * @author Nataniel Paiva <nataniel.paiva@gmail.com>
+ * @author Silvio Filipe
  */
 @Configuration
 @EnableResourceServer
@@ -36,6 +36,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
                 .clearAuthentication(true)
                 .and().authorizeRequests()
                 .antMatchers(HttpMethod.GET, "/usuario/**").hasAnyRole("ADMIN")
+                .antMatchers(HttpMethod.POST, "/usuario/**").hasAnyRole("ADMIN")
                 .antMatchers(HttpMethod.GET, "/**").hasAnyRole("ADMIN")
                 .anyRequest().denyAll();
     }

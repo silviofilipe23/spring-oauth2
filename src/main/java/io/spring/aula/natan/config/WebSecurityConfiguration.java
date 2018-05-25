@@ -21,7 +21,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 /**
  *
- * @author Nataniel Paiva <nataniel.paiva@gmail.com>1
+ * @author Silvio Filipe
  */
 @Configuration
 @EnableWebSecurity

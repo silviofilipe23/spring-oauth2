@@ -21,7 +21,7 @@ import org.springframework.stereotype.Component;
 
 /**
  *
- * @author Nataniel Paiva <nataniel.paiva@gmail.com>
+ * @author Silvio Filipe
  */
 @Component
 public class CargaInicial  implements ApplicationListener<ContextRefreshedEvent>{

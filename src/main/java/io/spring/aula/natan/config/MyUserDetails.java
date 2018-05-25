@@ -9,13 +9,14 @@
 package io.spring.aula.natan.config;
 
 import io.spring.aula.natan.entity.Usuario;
+import io.spring.aula.natan.utils.PasswordUtils;
 import java.util.Collection;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 /**
  *
- * @author Nataniel Paiva <nataniel.paiva@gmail.com>
+ * @author Silvio Filipe
  */
 public class MyUserDetails extends Usuario implements UserDetails{
 
@@ -30,6 +31,7 @@ public class MyUserDetails extends Usuario implements UserDetails{
 
     @Override
     public String getPassword() {
+        
         return getSenha();
     }
 

@@ -13,7 +13,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**
  *
- * @author Nataniel Paiva <nataniel.paiva@gmail.com>
+ * @author Silvio Filipe
  */
 public interface PerfilRepository extends MongoRepository<Perfil, String> {
 

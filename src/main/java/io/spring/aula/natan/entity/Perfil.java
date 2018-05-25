@@ -6,7 +6,7 @@ import org.springframework.security.core.GrantedAuthority;
 
 /**
  *
- * @author Nataniel Paiva <nataniel.paiva@gmail.com>
+ * @author Silvio Filipe
  */
 @Document
 public class Perfil implements GrantedAuthority{
